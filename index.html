@@ -1,46 +1,522 @@
-11.27 7:58 PM
-xliptan.html
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CRITICAL INTRUSION DETECTED - UNAUTHORIZED ACCESS</title><style>
-body{background-color:#000;color:#f00;font-family:'Consolas','Monaco',monospace;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;overflow:hidden;text-align:center;animation:bp 5s infinite alternate}@keyframes bp{0%{background-color:#000}100%{background-color:#1a0000}}
-.glitch-text{animation:glitch 1s linear infinite}@keyframes glitch{0%{text-shadow:2px 0 #f00,-2px 0 #0ff;transform:translate(0)}25%{text-shadow:-2px 0 #f00,2px 0 #0ff;transform:translate(1px,-1px)}50%{text-shadow:2px 0 #f00,-2px 0 #0ff;transform:translate(-1px,1px)}75%{text-shadow:-2px 0 #f00,2px 0 #0ff;transform:translate(1px,1px)}100%{text-shadow:2px 0 #f00,-2px 0 #0ff;transform:translate(0)}}
-.container{border:3px solid #f00;padding:60px 40px;max-width:90%;background-color:#0a0a0a;box-shadow:0 0 50px rgba(255,0,0,.7);position:relative;z-index:1;animation:bop 1.5s infinite alternate,shake .5s infinite alternate}@keyframes bop{0%{border-color:#f00;box-shadow:0 0 30px rgba(255,0,0,.5)}100%{border-color:#8b0000;box-shadow:0 0 60px rgba(255,0,0,.9)}}@keyframes shake{0%{transform:translateX(0)}25%{transform:translateX(-2px)}50%{transform:translateX(0)}75%{transform:translateX(2px)}100%{transform:translateX(0)}}
-h1{color:#f00;font-size:2.5rem;margin-bottom:20px;text-transform:uppercase;letter-spacing:3px;animation:tf .1s infinite alternate}@keyframes tf{0%{opacity:1}50%{opacity:.8}100%{opacity:1}}
-h2{color:#fff;font-size:1.2rem;border-bottom:2px solid #f00;display:inline-block;padding-bottom:15px;margin-bottom:40px;letter-spacing:2px;animation:tsp 2s infinite alternate}@keyframes tsp{0%{text-shadow:0 0 5px #fff}100%{text-shadow:0 0 20px #f00,0 0 30px #f00}}
-p{font-size:1rem;margin-bottom:25px;color:#d0d0d0;line-height:1.6}
-.highlight{color:#ff0;font-weight:700;text-shadow:0 0 10px #ff0}
-.team-name{color:#0f0;font-weight:700;font-size:1.3rem;text-shadow:0 0 15px #0f0}
-.btn-group{margin-top:50px}
-.btn{padding:15px 25px;font-size:1rem;margin:10px;text-decoration:none;font-weight:700;cursor:pointer;border:2px solid #f00;display:inline-block;transition:.2s ease-in-out;text-transform:uppercase;letter-spacing:1px}
-.btn-enter{background-color:transparent;color:#f00}
-.btn-enter:hover{background-color:#f00;color:#000;box-shadow:0 0 20px #f00;transform:scale(1.05)}
-.btn-leave{background-color:#0f0;color:#000;border:2px solid #0f0}
-.btn-leave:hover{background-color:#fff;color:#000;box-shadow:0 0 20px #0f0;transform:scale(1.05)}
-#status{margin-top:30px;color:#f00;font-weight:700;font-size:1.2rem;animation:sf .1s infinite alternate;text-shadow:0 0 15px #f00}@keyframes sf{0%{opacity:1}50%{opacity:.9}100%{opacity:1}}
-.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:repeating-linear-gradient(45deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 1px,transparent 2px);pointer-events:none;z-index:0;opacity:.1}
-</style></head><body>
-<div class="overlay"></div>
-<div class="container">
-<h1 class="glitch-text">!!! INTRUSION ALERT !!!</h1>
-<h2>CRITICAL SECURITY BREACH DETECTED</h2>
-<p>This access point is under <span class="highlight">EXTREME PROTECTION</span> for:</p>
-<p class="team-name">-- XLIPTAN'S TEAM ONLY --</p>
-<br>
-<p>Your current IP address and system signature have been <span class="highlight">IDENTIFIED</span> and <span class="highlight">LOCKED</span>.</p>
-<p><span class="highlight">UNAUTHORIZED ACCESS</span> is an act of <span class="highlight">CYBER-WARFARE</span>. Attempting to proceed will result in an <span class="highlight">IMMEDIATE AND IRREVERSIBLE REDIRECT</span> to unindexed sectors of the <span class="highlight">TOR NETWORK (DEEP/DARK WEB)</span>. Your digital footprint will be <span class="highlight">ERASED</span>.</p>
-<p>The consequences will be <span class="highlight">PERMANENT</span> and <span class="highlight">UNTREACEABLE</span>.</p>
-<div class="btn-group">
-<a href="https://www.google.com" class="btn btn-leave">ABORT AND DISCONNECT NOW</a>
-<button onclick="triggerHorrorProtocol()" class="btn btn-enter">I AM XLIPTAN'S TEAM - PROCEED</button>
-</div>
-<div id="status"></div>
-</div>
-<script>
-function triggerHorrorProtocol(){
-const statusDiv=document.getElementById('status');
-statusDiv.innerHTML="<span class='glitch-text'>INITIATING VERIFICATION PROTOCOL...</span>";
-setTimeout(()=>{statusDiv.innerHTML="<span class='glitch-text'>IDENTITY MISMATCH. UNRECOGNIZED SIGNATURE.</span>";statusDiv.style.color='#ff0'},1500);
-setTimeout(()=>{statusDiv.innerHTML="<span class='glitch-text'>WARNING: COUNTERMEASURES ENGAGED. IRREVERSIBLE ACTION.</span>";statusDiv.style.color='#f00'},3000);
-setTimeout(()=>{statusDiv.innerHTML="<span class='glitch-text'>REDIRECTING TO UNSECURED NODE: TOR PROTOCOL ACTIVATED... GOODBYE.</span>";statusDiv.style.color='#8b0000';alert("CRITICAL ERROR: Forced Redirect Initiated to Deep Web. You have been warned.")},5000)}
-</script></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CRITICAL INTRUSION DETECTED - UNAUTHORIZED ACCESS</title>
+<style>
+  :root{--red:#ff1b1b;--dark:#0a0a0a;--muted:#d0d0d0}
+  html,body{height:100%;margin:0}
+  body{
+    background:#000;
+    color:var(--red);
+    font-family:Consolas,Monaco,monospace;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
 
+  /* central container */
+  .container{
+    width:min(920px,94%);
+    padding:40px 36px;
+    border:3px solid var(--red);
+    background:linear-gradient(0deg,#080808 0%, #0f0f0f 100%);
+    box-shadow:0 0 60px rgba(255,0,0,.35);
+    position:relative;
+    z-index:5;
+    text-align:center;
+  }
+  h1{font-size:2.4rem;margin:0 0 10px;text-transform:uppercase;letter-spacing:2px}
+  .glitch{animation:glitch 1s linear infinite}
+  @keyframes glitch{
+    0%{text-shadow:2px 0 #ff0044,-2px 0 #00ffee; transform:translateX(0)}
+    25%{text-shadow:-2px 0 #ff0044,2px 0 #00ffee; transform:translate(1px,-1px)}
+    50%{text-shadow:2px 0 #ff0044,-2px 0 #00ffee; transform:translate(-1px,1px)}
+    75%{text-shadow:-2px 0 #ff0044,2px 0 #00ffee; transform:translate(1px,1px)}
+    100%{text-shadow:2px 0 #ff0044,-2px 0 #00ffee; transform:translate(0)}
+  }
+
+  h2{color:#fff;font-size:1.05rem;margin:6px 0 18px;border-bottom:2px solid var(--red);display:inline-block;padding-bottom:10px}
+  p{color:var(--muted);line-height:1.45;margin:12px 0}
+  .team{color:#0f0;font-weight:700}
+
+  .btns{margin-top:22px}
+  .btn{display:inline-block;padding:12px 18px;margin:8px;border:2px solid var(--red);text-transform:uppercase;font-weight:700;background:transparent;color:var(--red);cursor:pointer;transition:transform .12s ease, box-shadow .12s ease}
+  .btn.leave{border-color:#0f0;background:#0f0;color:#000}
+  .btn.enter:hover{transform:scale(1.03);box-shadow:0 0 18px rgba(255,0,0,.25)}
+
+  #status{margin-top:20px;font-weight:700;color:var(--red);min-height:28px}
+
+  /* hover warning popup style */
+  .hover-popup {
+    position:fixed;
+    left:50%;
+    top:18%;
+    transform:translateX(-50%) scale(.98);
+    background:linear-gradient(180deg,#200000,#120000);
+    color:#ffd6d6;
+    border:2px solid rgba(255,0,0,.35);
+    padding:18px 22px;
+    z-index:40;
+    box-shadow:0 10px 50px rgba(0,0,0,.8);
+    font-weight:700;
+    text-align:center;
+    width:min(680px,90%);
+    display:none;
+    animation:popupIn .22s ease-out forwards;
+  }
+  @keyframes popupIn{from{opacity:0;transform:translateX(-50%) scale(.95)}to{opacity:1;transform:translateX(-50%) scale(1)}}
+
+  .popup-actions{margin-top:12px;display:flex;gap:10px;justify-content:center}
+  .popup-actions button{padding:10px 14px;border-radius:6px;border:0;cursor:pointer;font-weight:800}
+  .btn-cancel{background:#0f0;color:#000}
+  .btn-continue{background:#ff3a3a;color:#000}
+
+  /* takeover overlay (terminal style) */
+  .takeover{
+    pointer-events:none;
+    position:fixed;
+    inset:0;
+    z-index:9;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    gap:20px;
+  }
+  .term {
+    margin-top:6vh;
+    width:92%;
+    max-width:1100px;
+    height:55vh;
+    background:linear-gradient(180deg,#060606 0%,#030303 100%);
+    border:3px dashed rgba(255,0,0,.12);
+    box-shadow:0 0 160px rgba(255,0,0,.08);
+    color:#ff4d4d;
+    padding:18px;
+    font-size:0.9rem;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    opacity:0;
+    transform:translateY(-10px) scale(.995);
+    transition:opacity .35s ease, transform .35s ease;
+  }
+
+  .term.active{opacity:1;transform:translateY(0) scale(1)}
+
+  .stream{
+    flex:1;
+    font-family:monospace;
+    line-height:1.25;
+    white-space:pre;
+    overflow:auto;
+    padding-right:12px;
+    color:#ff3a3a;
+    text-shadow:0 0 8px rgba(255,0,0,.12);
+    font-size:0.95rem;
+  }
+
+  /* scrolling MARQUEE-like */
+  .marquee{
+    height:3.2rem;
+    background:linear-gradient(90deg, rgba(255,0,0,.02), rgba(0,0,0,.12));
+    border-top:1px solid rgba(255,0,0,.04);
+    border-bottom:1px solid rgba(255,0,0,.04);
+    overflow:hidden;
+    color:#ffa0a0;
+  }
+  .marquee .inner{
+    display:inline-block;
+    padding-left:100%;
+    animation:marq 12s linear infinite;
+    white-space:nowrap;
+    font-weight:700;
+  }
+  @keyframes marq{
+    from{transform:translateX(0)}
+    to{transform:translateX(-100%)}
+  }
+
+  /* countdown display style */
+  #countdown{
+    display:inline-block;
+    min-width:80px;
+    font-size:1.6rem;
+    color:#ffd966;
+    font-weight:900;
+    letter-spacing:1px;
+    text-shadow:0 0 12px rgba(255,200,0,.12);
+  }
+
+  /* subtle shake effect while active */
+  .shake{animation:shake .5s linear infinite}
+  @keyframes shake{
+    0%{transform:translateX(0)}25%{transform:translateX(-3px)}50%{transform:translateX(0)}75%{transform:translateX(3px)}100%{transform:translateX(0)}
+  }
+
+  /* warning footer */
+  .warn{font-size:0.85rem;color:#ffb6b6;margin-top:10px}
+  @media (max-width:600px){
+    .term{height:56vh;margin-top:4vh;padding:10px;font-size:0.82rem}
+    h1{font-size:1.6rem}
+    .hover-popup{top:8%}
+  }
+</style>
+</head>
+<body>
+  <div class="container" id="mainContainer">
+    <h1 class="glitch">!!! INTRUSION ALERT !!!</h1>
+    <h2>CRITICAL SECURITY BREACH DETECTED</h2>
+
+    <p>This access point is under <strong style="color:#ffde59">EXTREME PROTECTION</strong> for:</p>
+    <p class="team">-- XLIPTAN'S TEAM ONLY --</p>
+
+    <p>Your current IP and system signature have been <strong style="color:#ffde59">IDENTIFIED</strong> and <strong style="color:#ffde59">LOCKED</strong>.</p>
+    <p><strong style="color:#ffde59">UNAUTHORIZED ACCESS</strong> will trigger emergency countermeasures.</p>
+
+    <div class="btns">
+      <a class="btn leave" href="https://www.google.com" target="_blank" rel="noopener">ABORT AND DISCONNECT NOW</a>
+      <button class="btn enter" id="proceedBtn">I AM XLIPTAN'S TEAM - PROCEED</button>
+    </div>
+
+    <div id="status"></div>
+    <div class="warn">Terminal takeover initiated only after verification. Click proceed to begin secure verification.</div>
+  </div>
+
+  <!-- one-time hover warning popup (hidden until hover) -->
+  <div class="hover-popup" id="hoverPopup" role="dialog" aria-modal="true" aria-hidden="true">
+    <div style="font-size:1.05rem;color:#ffd6d6">⚠ FINAL WARNING</div>
+    <div style="margin-top:8px;color:#ffbdbd">
+      Continuing will initiate a **controlled simulation** of countermeasures. This simulation is intense and will alter the interface. No real data will be harmed.
+    </div>
+    <div class="popup-actions">
+      <button class="btn-cancel" id="popupCancel">CANCEL</button>
+      <button class="btn-continue" id="popupAllow">I UNDERSTAND — CONTINUE</button>
+    </div>
+  </div>
+
+  <!-- takeover UI (hidden until active) -->
+  <div class="takeover" id="takeover">
+    <div class="term" id="termWindow" role="status" aria-live="polite">
+      <div class="marquee"><div class="inner">BREACH // HOSTILE ACCESS // QUARANTINE // COUNTERMEASURES // NETWORK SEAL</div></div>
+      <div class="stream" id="streamArea"></div>
+      <div style="display:flex;align-items:center;gap:12px;padding-top:8px;">
+        <div style="flex:1;color:#ffa0a0">Status: <span id="streamStatus">INITIALIZING</span></div>
+        <div id="countdown">--</div>
+      </div>
+    </div>
+  </div>
+
+<script>
+/*
+  Final safe-but-intense page:
+  - One-time hover popup shown on first hover over proceed button
+  - Subtle screen shake and button tremble on hover
+  - Audio sequence (WebAudio) started on user click: rising alarm -> cinematic impact
+  - Mobile vibration during countdown and impact (gentle)
+  - Final anxious message (cliffhanger)
+*/
+
+(function(){
+  const proceedBtn = document.getElementById('proceedBtn');
+  const statusEl = document.getElementById('status');
+  const takeover = document.getElementById('takeover');
+  const termWindow = document.getElementById('termWindow');
+  const streamArea = document.getElementById('streamArea');
+  const streamStatus = document.getElementById('streamStatus');
+  const countdownEl = document.getElementById('countdown');
+
+  const hoverPopup = document.getElementById('hoverPopup');
+  const popupCancel = document.getElementById('popupCancel');
+  const popupAllow = document.getElementById('popupAllow');
+
+  let hoverShown = false;
+  let audioCtx, masterGain, alarmGain;
+
+  // write to terminal stream
+  function pushLine(text){
+    const el = document.createElement('div');
+    el.textContent = text;
+    streamArea.appendChild(el);
+    streamArea.scrollTop = streamArea.scrollHeight;
+  }
+
+  // show one-time hover popup with light screen shake
+  function showHoverPopup(){
+    if(hoverShown) return;
+    hoverShown = true;
+    // popup visible
+    hoverPopup.style.display = 'block';
+    hoverPopup.setAttribute('aria-hidden','false');
+
+    // gentle page shake
+    document.body.animate([
+      { transform: 'translateX(0)' },
+      { transform: 'translateX(-6px)' },
+      { transform: 'translateX(6px)' },
+      { transform: 'translateX(0)' }
+    ], { duration: 420, iterations: 1, easing: 'ease-in-out' });
+
+    // button tremble
+    proceedBtn.animate([
+      { transform: 'translateX(0)' },
+      { transform: 'translateX(-6px)' },
+      { transform: 'translateX(6px)' },
+      { transform: 'translateX(0)' }
+    ], { duration: 420, iterations: 3, easing: 'ease-in-out' });
+  }
+
+  // cancel popup: hide and allow safe hover to continue (no auto-click)
+  popupCancel.addEventListener('click', ()=>{
+    hoverPopup.style.display = 'none';
+    hoverPopup.setAttribute('aria-hidden','true');
+    // small calm animation
+    proceedBtn.focus();
+  });
+
+  // allow popup: hide, then programmatically focus proceed button (user must still click to start audio/sequence)
+  popupAllow.addEventListener('click', ()=>{
+    hoverPopup.style.display = 'none';
+    hoverPopup.setAttribute('aria-hidden','true');
+    proceedBtn.focus();
+  });
+
+  // hover listener (only first time triggers popup)
+  proceedBtn.addEventListener('mouseenter', (e)=>{
+    if(!hoverShown) showHoverPopup();
+    // always tremble on hover for effect
+    proceedBtn.animate([
+      { transform: 'translateY(0)' },
+      { transform: 'translateX(-3px) rotate(-0.6deg)' },
+      { transform: 'translateX(3px) rotate(0.6deg)' },
+      { transform: 'translateY(0)' }
+    ], { duration: 360, iterations: 1, easing: 'ease-in-out' });
+  });
+
+  // audio initialization (WebAudio)
+  function initAudio(){
+    if(audioCtx) return;
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    masterGain = audioCtx.createGain();
+    masterGain.gain.value = 0.0001; // near silent start
+    masterGain.connect(audioCtx.destination);
+
+    // alarm tone
+    alarmGain = audioCtx.createGain();
+    alarmGain.gain.value = 0.0;
+    const alarmOsc = audioCtx.createOscillator();
+    alarmOsc.type = 'sawtooth';
+    alarmOsc.frequency.value = 360; // base
+    // small LFO to modulate frequency for unease
+    const lfo = audioCtx.createOscillator();
+    lfo.frequency.value = 2.6;
+    const lfoGain = audioCtx.createGain();
+    lfoGain.gain.value = 8; // small freq modulation
+    lfo.connect(lfoGain);
+    lfoGain.connect(alarmOsc.frequency);
+    lfo.start();
+
+    alarmOsc.connect(alarmGain);
+    alarmGain.connect(masterGain);
+    alarmOsc.start();
+  }
+
+  // ramp alarm volume/character
+  function rampAlarm(target, time){
+    const now = audioCtx.currentTime;
+    alarmGain.gain.cancelScheduledValues(now);
+    alarmGain.gain.setValueAtTime(alarmGain.gain.value || 0.0001, now);
+    alarmGain.gain.linearRampToValueAtTime(target, now + time);
+  }
+
+  // cinematic impact: filtered noise + low sub + quick transient (not human / not scream)
+  function playCinematicImpact(){
+    if(!audioCtx) return;
+    const now = audioCtx.currentTime;
+
+    const impactGain = audioCtx.createGain();
+    impactGain.gain.value = 0.0001;
+
+    // low sine sub
+    const sub = audioCtx.createOscillator();
+    sub.type = 'sine';
+    sub.frequency.value = 45;
+
+    // mid harmonic
+    const mid = audioCtx.createOscillator();
+    mid.type = 'triangle';
+    mid.frequency.value = 120;
+
+    // noise burst
+    const bufferSize = audioCtx.sampleRate * 0.7;
+    const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+    const data = noiseBuffer.getChannelData(0);
+    for (let i=0;i<bufferSize;i++) data[i] = (Math.random()*2 - 1);
+
+    const noise = audioCtx.createBufferSource();
+    noise.buffer = noiseBuffer;
+
+    // bandpass filter for noise
+    const noiseFilter = audioCtx.createBiquadFilter();
+    noiseFilter.type = 'bandpass';
+    noiseFilter.frequency.value = 560;
+    noiseFilter.Q.value = 0.8;
+
+    // gentle distortion to make the impact cinematic
+    const wave = audioCtx.createWaveShaper();
+    function makeCurve(amount){
+      const n = 2048;
+      const curve = new Float32Array(n);
+      const k = amount;
+      for (let i=0;i<n;i++){
+        const x = (i*2)/n - 1;
+        curve[i] = ((1 + k) * x) / (1 + k * Math.abs(x));
+      }
+      return curve;
+    }
+    wave.curve = makeCurve(6);
+    wave.oversample = '2x';
+
+    // connect nodes
+    sub.connect(wave);
+    mid.connect(wave);
+    noise.connect(noiseFilter);
+    noiseFilter.connect(wave);
+
+    wave.connect(impactGain);
+    impactGain.connect(masterGain);
+
+    // envelope
+    const length = 2.0;
+    impactGain.gain.setValueAtTime(0.0001, now);
+    impactGain.gain.exponentialRampToValueAtTime(0.9, now + 0.06);
+    impactGain.gain.exponentialRampToValueAtTime(0.2, now + length - 0.35);
+    impactGain.gain.exponentialRampToValueAtTime(0.001, now + length);
+
+    // start/stop
+    sub.start(now);
+    mid.start(now);
+    noise.start(now);
+    sub.stop(now + length + 0.05);
+    mid.stop(now + length + 0.05);
+    noise.stop(now + length + 0.05);
+  }
+
+  // vibration helper (safe gentle patterns)
+  function vibrate(pattern){
+    try {
+      if(navigator.vibrate) navigator.vibrate(pattern);
+    } catch(e){}
+  }
+
+  // visual takeover activation
+  function activateTakeover(){
+    takeover.style.pointerEvents = 'auto';
+    termWindow.classList.add('active','shake');
+    // seed terminal lines
+    const lines = [
+      '[SECURITY] MODULE LOADING...',
+      '[SYS] SIGNATURE CHECK: INCOMPLETE',
+      '[ALERT] COUNTERMEASURES STAGED',
+      '[NET] SESSION MARKED: QUARANTINE',
+      '[PROC] SANDBOX: ENGAGING',
+      '[TRACE] ATTEMPTING REDUNDANT HANDSHAKE'
+    ];
+    lines.forEach((l,i)=> setTimeout(()=>pushLine(l), i*230));
+    streamStatus.textContent = 'VERIFICATION: PENDING';
+  }
+
+  // main sequence: countdown + ramp + impact + final state
+  function runSequence(){
+    initAudio();
+    if(audioCtx.state === 'suspended') audioCtx.resume();
+
+    activateTakeover();
+    statusEl.textContent = '';
+    proceedBtn.disabled = true;
+    proceedBtn.style.opacity = 0.5;
+
+    // countdown
+    let count = 6;
+    countdownEl.textContent = count;
+    streamStatus.textContent = 'VERIFICATION IN PROGRESS';
+
+    // master volume base
+    masterGain.gain.setValueAtTime(0.6, audioCtx.currentTime);
+    alarmGain.gain.setValueAtTime(0.02, audioCtx.currentTime);
+
+    // short initial vibration
+    vibrate([120,60,120]);
+
+    const iv = setInterval(()=>{
+      count--;
+      if(count >= 1){
+        countdownEl.textContent = count;
+        pushLine(`[COUNTDOWN] T-${count} seconds...`);
+        // progressively increase alarm (final target ~0.85)
+        const progress = (6 - count) / 6;
+        const target = 0.02 + (0.83 * progress);
+        rampAlarm(target, 0.9);
+        // small vibration
+        vibrate(80);
+      } else {
+        clearInterval(iv);
+        countdownEl.textContent = '0';
+        pushLine('[COUNTDOWN] EXECUTE');
+        streamStatus.textContent = 'COUNTERMEASURES ENGAGED';
+        // spike alarm quickly
+        rampAlarm(0.94, 0.2);
+        // small wait then cinematic impact
+        setTimeout(()=>{
+          vibrate([220,130,220,130,320]);
+          playCinematicImpact();
+          pushLine('[EVENT] CINEMATIC OUTPUT');
+          // gently lower alarm so impact stands out
+          rampAlarm(0.06, 1.2);
+          // final anxious/cliffhanger message
+          setTimeout(()=>{
+            pushLine('SIMULATION COMPLETE. A deeper process has quietly started in the background.');
+            streamStatus.textContent = 'SIMULATION: PAUSED';
+            // leave the UI in tense state (no further action)
+            // small final vibration
+            vibrate([140,90]);
+            // accessible alert summary (non-alarming)
+            setTimeout(()=> {
+              try{ alert('SIMULATION COMPLETE. A deeper process has quietly started in the background.'); }catch(e){}
+            }, 300);
+          }, 900);
+        }, 500);
+      }
+    }, 1000);
+  }
+
+  // wire proceed button: must be user gesture to allow audio
+  proceedBtn.addEventListener('click', function(){
+    statusEl.textContent = 'INITIATING VERIFICATION PROTOCOL...';
+    // begin sequence
+    try{
+      runSequence();
+    } catch(err){
+      console.error('Sequence error', err);
+      statusEl.textContent = 'ERROR: Unable to start sequence.';
+    }
+  });
+
+  // allow keyboard activation
+  proceedBtn.addEventListener('keyup', function(e){
+    if(e.key === 'Enter' || e.key === ' ') this.click();
+  });
+
+  // stop/cleanup on page hide
+  window.addEventListener('pagehide', ()=> {
+    if(audioCtx && audioCtx.close) audioCtx.close().catch(()=>{});
+  });
+
+})();
+</script>
+</body>
+</html>
